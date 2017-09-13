@@ -75,6 +75,18 @@ class Routes extends RouteListCommand
     }
 
     /**
+     * Laravel 5.5
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $this->routes = $this->router->getRoutes();
+
+        parent::handle();
+    }
+
+    /**
      * Compile the routes into a displayable format.
      *
      * @return array
